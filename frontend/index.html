@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>This is a test API</p>
+
+    <button onclick="getTasks()">get data</button>
+    <!-- <button onclick="createTasks()">create data</button>
+    <button onclick="deleteTasks()">delete data</button>
+    <button onclick="updateTasks()">update data</button> -->
+    <script>
+      const getTasks = () => {
+        var apiUrl = "http://localhost:4000";
+        fetch(apiUrl)
+          .then((res) => {
+            return res.json();
+          })
+          .then((res) => {
+            console.log(res);
+          });
+      };
+      // const createTasks = () => {
+      //   var apiUrl = "http://localhost:4000/create-new-task";
+      //   fetch(apiUrl)
+      //     .then((res) => {
+      //       return res.json();
+      //     })
+      //     .then((res) => {
+      //       console.log(res);
+      //     });
+      // };
+      // const deleteTasks = () => {
+      //   var apiUrl = "http://localhost:4000/delete-Task";
+      //   fetch(apiUrl)
+      //     .then((res) => {
+      //       return res.json();
+      //     })
+      //     .then((res) => {
+      //       console.log(res);
+      //     });
+      // };
+      // const updateTasks = () => {
+      //   var apiUrl = "http://localhost:4000/update-task";
+      //   fetch(apiUrl)
+      //     .then((res) => {
+      //       return res.json();
+      //     })
+      //     .then((res) => {
+      //       console.log(res);
+      //     });
+      // };
+    </script>
+  </body>
+</html>
